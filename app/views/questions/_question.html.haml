@@ -1,0 +1,16 @@
+.card
+  .card-header
+    .fa.fa-bell
+    = link_to question.title, question_path(question)
+  .card-body
+    = question.description
+  .card-footer
+    .far.fa-clock
+    = question.created_at.strftime("%Y-%b-%d")
+    .row
+    .fa.fa-chalkboard-teacher
+    = question.user
+  .card-footer
+    = link_to 'Show', question, class: "btn btn-sm btn-primary"
+    = link_to 'Edit', edit_question_path(question), class: "btn btn-sm btn-warning"
+    = link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger"

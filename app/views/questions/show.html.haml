@@ -1,0 +1,6 @@
+= link_to 'Questions', questions_path
+\/
+= link_to @question.title, question_path(@question)
+
+%p
+= render 'questions/question', question:@question
